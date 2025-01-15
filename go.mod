@@ -1,3 +1,5 @@
 module gol
 
-go 1.18
+go 1.23
+
+require github.com/mattn/go-runewidth v0.0.9 // indirect

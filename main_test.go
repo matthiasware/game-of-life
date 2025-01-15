@@ -202,14 +202,14 @@ func TestUpdateWorld(t *testing.T) {
 	for _, worlds := range now_exp {
 		wNow := worlds[0]
 		wExp := worlds[1]
-		wAct := UpdateWorld(wNow)
+		wAct := UpdateWorldSerial(wNow)
 		if equal, msg := compareWorlds(wAct, wExp); !equal {
 			fmt.Println("Initial")
-			displayWorld(wNow)
+			DisplayWorld(wNow)
 			fmt.Println("Expected")
-			displayWorld(wExp)
+			DisplayWorld(wExp)
 			fmt.Println("Got")
-			displayWorld(wAct)
+			DisplayWorld(wAct)
 			t.Fatal(msg)
 
 		}
